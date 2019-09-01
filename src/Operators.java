@@ -5,7 +5,7 @@ import java.math.BigInteger;
  * Klasa test służy do...
  * @author Krzysztof Siadul
  */
-public class Test {
+public class Operators {
     // definicja metod i/lub pól
 
     /**
@@ -268,19 +268,82 @@ public class Test {
             System.out.println("idziemy pić kubusia");
         }
 
+        // notacja wykładnicza
+        double de1 = 1e3;
+        double de2 = 10e-6;
+
+        System.out.println(de1);
+        System.out.println(de2);
+
+        int oct1 = 071;
+        System.out.println(oct1); // 57
+
+        int hex1 = 0xFF; // ?
+        System.out.println(hex1); // 255
+
+        char ch = 'ą';
+        System.out.println(ch);
+        System.out.println((int)ch);
+        ch = 'a';
+        System.out.println((int)ch);
+
+
         // Zadanie
         // proszę napisać warunek if, który będzie wypisywał koumunikat
         // czy możemy iść do domu w oparciu o zmienną przechowywującą godzinę
 //        int hour = 1;
+        int hour = 11;
+        if(hour == 16) {
+            System.out.println("Możemy iść do domu");
+        }
+        else {
+            System.out.println("Nie możemy iść do domu");
+        }
+
+        // możemy pominąć stosowanie klamer, jeżeli mamy tylko 1 instrukcję
+        // natomiast nie jest to zalecane z punktu widzenia przejrzoystości
+//        if(hour == 16)
+//            System.out.println("Możemy iść do domu");
+//        else
+//            System.out.println("Nie możemy iść do domu");
+        if(hour == 16) {
+            System.out.println("Możemy iść do domu");
+        } else if(hour == 11) {
+            System.out.println("Możemy iść na przerwę");
+        } else {
+            System.out.println("Musimy siedzieć i się uczyć javy");
+        }
+
+        // Zadanie
+        // Sprawdzić czy zmienna n jest podzielna przez 3. Jeżeli tak
+        // wypisać stosowny komunikat. Jeżeli nie sprawdzić
+        // czy liczba ta jest podzielna przez 2.
+        // Jeżeli nie jest podzielna ani przez 3 ani przez 2.
+        // wypisać komunikat, że liczba nie jest podzielna przez 6.
 
 
+        int n = 35;
+
+        if (n % 3 == 0) {
+            System.out.println("n podzielne jest przez 3");
+        } else if (n % 2 == 0) {
+            System.out.println("n podzielne jest przez 2");
+        } else {
+            System.out.println("n nie podzielna jest przez 6");
+        }
+        // Uwaga!
+        // po instrukcji if nie dajemy ; ponieważ najprawdopodobniej
+        // kod nie wykona się poprawnie mimo kompilacji
 
 
+        // Dla ambitnych
+        // Zrobić to samo tylko przy użyciu operatora trójargumentowego
+        // warunek ? jezeli tak : jezeli nie
 
-
-
-
-
+        System.out.println(
+                n % 3 == 0 ? "n podzielna przez 3" : (n % 2 == 0 ?
+                        "n podzielne przez 2" : "nie podzielne przez 6")
+        );
     }
 
 }
