@@ -59,6 +59,15 @@ p2.getVector(p1) // w javie nie ma przeciążania operatorów, więc musimy
         System.out.println("Współrzędne punktu: [" + p3_X + ", " + p3_Y + "]");
 
         System.out.println("P2 - P1 =  [" + p3_X + ", " + p3_Y + "]");
+
+        System.out.println("Zadanie 2");
+        Circle circle = new Circle();
+        circle.p = new Point();
+        circle.r = 10;
+        circle.p.X = 5.5;
+        circle.p.Y = 7.5;
+        System.out.println(circle.p.X + ", " + circle.p.Y);
+        System.out.println(circle.r);
     }
 }
 
@@ -103,9 +112,19 @@ class Point {
 //    println('test');
 //        }
 
-// Zadanie
+// Zadanie 2
 // a) Stworzyć klasę reprezentującą okrąg.
 // Pole1 (mogą być 2 double) środek
 // Pole2 długośc promienia
 // b) skorzystać z utworzonej klasy - utworzyć obiekt oraz wypisać środek oraz promień
 // // nowoutworzonego okręgu
+
+class Circle {
+    // pola
+    Point p;
+    double r;
+}
+
+// Zadanie 3
+// Napisać klasę, która reprezentuje prostokąt
+// Skorzystać z tej klasy do wypisania pola tego prostokąta.
