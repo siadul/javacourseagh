@@ -32,7 +32,65 @@ class Calculator {
     double sum(double x, double y) {
         return x + y;
     }
+
+    double getMax(double x, double y) {
+        if(x >= y) {
+            return x;
+        } else {
+            return y;
+        }
+    }
+
+    int getSumOfN(int n) {
+        // 1, 2, 3, ... n
+        // dla n = 5 -> 1 + 2 + 3 + 4 + 5 + 6 =  21
+        // I sposób - przy użyciu pętli
+        int sum = 0;
+        for(int i=1; i<=n; i++) {
+            sum = sum + i;
+        }
+
+        // II sposób
+        // 1 + 6
+        // 2 + 5
+        // 3 + 4
+        // (a1 + an)*n/2
+
+        return (1 + n) * n/2;
+    }
+
+    // silnia n, gdy n = 0, 1, silnia(0) = 1, silnia(1) = 1, dla n > 1
+    // silnia(n) = 1*2*3..*n,
+    // wywołanie rekurencyjne, silnia(n-1) * n
+    int factorial(int n) {
+        System.out.println("liczę factorial(" + n + ")");
+        if(n < 2) {
+            System.out.println("n < 2, zwróć 1");
+            return 1;
+        }
+        System.out.println("zwróc factorial(" + (n-1) + ")*"+n);
+
+        return factorial(n-1)*n; // wywołanie rekurencyjne
+    }
+
+    int fib(int n) {
+        System.out.println("liczę fib(" + n + ")");
+        if(n < 2) {
+            return n;
+        }
+        System.out.println("zwróć fib(" + (n-1) + ") + fib(" + (n-2) + ")");
+
+        return fib(n-1) + fib(n-2); // wywołanie rekurencyjne x2
+    }
 }
+
+    // Zadanie
+    // napisać funkcję rekurencyjną, która liczy n-ty wyraz ciągu
+    // Fibbonaciego
+    // Wskazówka: ciąg Fibbonaciego
+    // fib(0) = 0. fib(1) = 1, dla n > 1, fib(n) = fib(n-1) + fib(n-2)
+    // przykład dla n = 5
+    // 0, 1, 1, 2, 3, 5
 
 public class ObjectsExcercises2 {
 
@@ -95,7 +153,7 @@ public class ObjectsExcercises2 {
         // Przykład
         // Dodać metodę, która będzie zwracała sumę liczb a i
 
-        // Zadanie
+        // Zadanie 6
         // a) Zdefiniować klasę User
         // b) Dodać do niej pola name, surname
         // c) Dodać metodę, która wypisuje imię i nazwisko np.
@@ -129,7 +187,7 @@ public class ObjectsExcercises2 {
         // Wartość zwracaną możemy przypisać do zmiennej lub bezpośrednio
         // przekazać do innej metody
 
-        // Zadanie
+        // Zadanie 7
         // a) Do klasy User dodać metodę getNameAndSurname(), która
         // będzie zwracała String zbudowany z imienia i nazwiska.
         // b) Przypisać zwróconą w pkt. a) wartość do zmiennej typu String
@@ -160,13 +218,66 @@ public class ObjectsExcercises2 {
         double sum2 = calculator1.sum(2, 2.5);
         System.out.println(sum2);
 
-        // Zadanie
-        // Napisać metodę, która przyjmuje 2 zmienne typu dobule
+        // Zadanie 8
+        // Napisać metodę, która przyjmuje 2 zmienne typu double
         // Wypisać watość większej zmiennej.
         // Wskazówka: if, > < == >= <=
 
+        double result = calculator1.getMax(3.4,9.2);
+        System.out.println(result);
+        System.out.println(calculator1.getMax(4.0, 4.0));
 
 
+        // Zadanie 9
+        // Napisać metodę, która zwraca sumę liczb od 1 do n, gdzie n jest
+        // argumentem tej metody
+
+        int sumOfN = calculator1.getSumOfN(5);
+        System.out.println(sumOfN);
+
+
+        // Zadanie 10*
+        // Napisać metodę, która liczy silnię w sposób rekurencyjny
+        int n = 5;
+        System.out.println("silnia(" + n + ") = ");
+        int factorial = calculator1.factorial(n); // 120
+        System.out.println(factorial);
+
+        System.out.println("fib(" + n + ") = "); // 0 1 1 2 3 5 8 13 21 34 55 89
+        int fib = calculator1.fib(n);
+        System.out.println(fib);
+
+
+        // return - przerywa dalsze wykonywanie metody
+        // składnia
+        // return wartość_zwracana
+        // jezeli typ zwracany jest void (pusty)
+        // to albo nie uzywamy return albo nie dajemy żadnej
+        // wartości po słowie return;
+        ObjectsExcercises2 objectsExcercises2 = new ObjectsExcercises2();
+        objectsExcercises2.fooWithReturn1();
+        float fooResult = objectsExcercises2.fooWithReturn2();
+        // może być int, float, ale nie String!. typy muszą się zgadzać
+        System.out.println(fooResult);
+    }
+
+    public void fooWithReturn1() {
+        System.out.println("fooWithReturn1");
+        if(1 > 2) {
+            return;
+        }
+        System.out.println("fooWithReturn1 after return");
+
+    }
+
+    public int fooWithReturn2() {
+        System.out.println("fooWithReturn2");
+        if(1 > 2) {
+            return 5;
+        }
+        System.out.println("fooWithReturn2 after return");
+
+        return 6;
     }
 }
 
