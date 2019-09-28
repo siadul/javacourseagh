@@ -109,6 +109,27 @@ public class Static {
         // c) Stworzyć obiekt tej klasy na podstawie sparametryzowanego konstruktora utworzonego
         // w pkt. b)
 
+        // Zadanie
+        // a) Stworzyć klasę Pies, składającą się z pól:
+        //  - String rasa
+        //  - String imie
+        //  - int wiek
+        // b) Dodać konstruktor z pustą listą argumentów który przypisze wartości
+        //    domyślne rasa = "kundel", imie = "noname", wiek = "0"
+        // c) Dodać konstruktor z 3 argumentami (String rasa, String imie, int wiek)
+        // d) Utworzyć co najmniej 2 obiekty klasy Pies przy pomocy obu tych konstruktorów
+
+        // Zadanie *
+        // a) Stworzyć klasę Node, który zawiera 2 pola typu Node: "nodeLeft" i "nodeRight" oraz 1 pole
+        // typu int "value"
+        // b) Utworzyć obiekt klasy Node, którego struktura wyglada w ten sposob
+        //     1
+        //  2     3
+        // 4 5   6 7
+
+
+
+
 
 
 
