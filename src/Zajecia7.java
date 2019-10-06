@@ -174,15 +174,6 @@ public class Zajecia7 {
         arrOfObject[1] = new CandyBracelet();
 
         doSomething(arrOfObject);
-
-        // tablice wielowymiarowe...
-        // kontenery o zmiennej liczbie elementów...
-        // ciągi znaków
-        // wejście/wyjście
-        // wyjątki
-        // klasy wewnętrzne (skrót)
-        // java.fx
-        // podsumowanie
     }
 
     public static void doSomething(CandyBracelet[] bracelets) {
