@@ -9,12 +9,13 @@ public class Zajecia10 {
     public static void main(String[] args) throws Throwable {
 
         // wyjątki
-//        Exceptions.main(args);
+        Exceptions.main(args);
 
         // klasy wewnętrzne (skrót)
-//        Inner.main(args);
+        Inner.main(args);
 
         // wejście/wyjście
+
         // PrintWriter - zapis
         // FileWriter - dopisywanie
         // Scanner - odczyt
