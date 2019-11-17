@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.listeners.Controller">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <Circle fx:id="c1" fill="#ff491f" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </StackPane>
+   </center>
+   <bottom>
+      <ProgressBar fx:id="pb1" prefWidth="200.0" progress="0.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <Spinner fx:id="sp1" editable="true" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Spinner fx:id="sp2" editable="true" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
